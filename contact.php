@@ -28,7 +28,7 @@ include('widgets/header.php');
             </div>
             <div class="row">
                 <div class="col-md-6 text-center">
-                    <img src="assets/products/poufs/8.jpg" height="400px" alt="">
+                    <img src="assets/favicon.ico" height="400px" alt="">
                 </div>
                 <div class="col-md-6">
                     <div class="container py-5">

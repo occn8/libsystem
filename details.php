@@ -32,7 +32,7 @@ include('widgets/header.php');
                                 <div class="col">
                                     <form action="details.php" method="post">
                                         <?php if (in_array($_SESSION['item_id'], $cart_item_id ?? [])) : ?>
-                                            <button type="submit" name="add" class="btn btn-warning font-size-16 form-control" disabled>In your Cart</button>
+                                            <button type="submit" name="add" class="btn btn-warning font-size-16 form-control" disabled>In your Reading List</button>
                                         <?php else : ?>
                                             <button type="submit" name="add" class="btn btn-warning font-size-16 form-control">Add to Reading List</button>
                                         <?php endif; ?>

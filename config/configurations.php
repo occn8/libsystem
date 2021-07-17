@@ -36,7 +36,7 @@ $users = "CREATE TABLE IF NOT EXISTS users (
 		)";
 mysqli_query($connect, $users);
 
-$pdts = "CREATE TABLE IF NOT EXISTS books (
+$books = "CREATE TABLE IF NOT EXISTS books (
 		book_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
         book_name VARCHAR (25) NOT NULL,
 		book_type VARCHAR (25) NOT NULL,
@@ -45,7 +45,7 @@ $pdts = "CREATE TABLE IF NOT EXISTS books (
  		modified datetime NOT NULL,	
         book_image VARCHAR (100)
 		)";
-mysqli_query($connect, $pdts);
+mysqli_query($connect, $books);
 
 $msgs = "CREATE TABLE IF NOT EXISTS messages (
 	msg_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -57,13 +57,13 @@ $msgs = "CREATE TABLE IF NOT EXISTS messages (
 	)";
 mysqli_query($connect, $msgs);
 
-$cart = "CREATE TABLE IF NOT EXISTS cart (
-	cart_id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+$readlist = "CREATE TABLE IF NOT EXISTS readlist (
+	readlist_id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	userid int(11) NOT NULL,
 	book_id int(11) NOT NULL,
 	book_qty int(11) NOT NULL
 	)";
-mysqli_query($connect, $cart);
+mysqli_query($connect, $readlist);
 
 
 $admincreate = "INSERT INTO users (id,fname, lname, username, email, regdate,modified, address, country, district, zip, password) 
@@ -172,8 +172,8 @@ if (isset($_POST['signin_user'])) {
 			$_SESSION['username'] = $username;
 			$_SESSION['id'] = $uid;
 			setcookie('user', $username, time() + (86400 * 2), "/");
-			if ($_SESSION['pagefrom'] == "cart") {
-				header('location: cart.php');
+			if ($_SESSION['pagefrom'] == "readlist") {
+				header('location: readlist.php');
 			} else {
 				header('location: index.php');
 			}
@@ -232,7 +232,7 @@ if (isset($_POST['add'])) {
 		$uid = $_SESSION['id'];
 
 		if (in_array($_POST['book_id'], $item_array_id)) {
-			echo "<script>alert('Book is already added in the cart..!')</script>";
+			echo "<script>alert('Book is already added in the readlist..!')</script>";
 			echo "<script>window.location = 'index.php'</script>";
 		} else {
 
@@ -247,8 +247,8 @@ if (isset($_POST['add'])) {
 			if ($item_array != null) {
 				$columns = implode(',', array_keys($item_array));
 				$values = implode(',', array_values($item_array));
-				$insert_cart = sprintf("INSERT INTO %s(%s) VALUES(%s)", 'cart', $columns, $values);
-				$result = $connect->query($insert_cart);
+				$insert_readlist = sprintf("INSERT INTO %s(%s) VALUES(%s)", 'readlist', $columns, $values);
+				$result = $connect->query($insert_readlist);
 			}
 
 			$_SESSION['readlist'][$count] = $item_array;
@@ -289,7 +289,7 @@ if (isset($_POST['send_msg'])) {
 	}
 }
 
-$querrypdts = "SELECT * FROM books";
+$querrybooks = "SELECT * FROM books";
 $querryarmchairs = "SELECT * FROM books WHERE book_type='armchairs'";
 $querrychaiselongues = "SELECT * FROM books WHERE book_type='chaiselongues'";
 $querrycushions = "SELECT * FROM books WHERE book_type='cushions'";
@@ -303,9 +303,9 @@ $querrySofa = "SELECT * FROM books WHERE book_type='Sofa'";
 $querrylatest = "SELECT * FROM books WHERE modified='2021-02-05 13:23:05'";
 $querryusers = "SELECT * FROM users";
 $querrymessages = "SELECT * FROM messages";
-$querrycart = "SELECT * FROM cart";
+$querryreadlist = "SELECT * FROM readlist";
 
-$result = $connect->query($querrypdts);
+$result = $connect->query($querrybooks);
 if ($result->num_rows > 0) {
 } else {
 }
@@ -317,7 +317,7 @@ $messagesresult = $connect->query($querrymessages);
 if ($result->num_rows > 0) {
 } else {
 }
-$cartresult = $connect->query($querrycart);
+$readlistresult = $connect->query($querryreadlist);
 if ($result->num_rows > 0) {
 } else {
 }

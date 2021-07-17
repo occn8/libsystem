@@ -86,8 +86,8 @@
                                         <div class="cart_count ">
                                             <?php
 
-                                            if (isset($_SESSION['cart'])) {
-                                                $count = count($_SESSION['cart']);
+                                            if (isset($_SESSION['readlist'])) {
+                                                $count = count($_SESSION['readlist']);
                                                 echo "<span id=\"cart_count\" class=\"text-success \">$count</span>";
                                             } else {
                                                 echo "<span id=\"cart_count\" class=\"text-success\">0</span>";
@@ -120,8 +120,8 @@
                                             <div class="cart_count ">
                                                 <?php
 
-                                                if (isset($_SESSION['cart'])) {
-                                                    $count = count($_SESSION['cart']);
+                                                if (isset($_SESSION['readlist'])) {
+                                                    $count = count($_SESSION['readlist']);
                                                     echo "<span id=\"cart_count\" class=\"text-success \">$count</span>";
                                                 } else {
                                                     echo "<span id=\"cart_count\" class=\"text-success\">0</span>";

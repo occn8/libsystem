@@ -33,11 +33,11 @@ include('widgets/header.php');
                         $book_id = array_column($_SESSION['readlist'], 'book_id');
                         $book_qty = array_column($_SESSION['readlist'], 'book_qty');
 
-                        $result = $connect->query($querrypdts);
+                        $result = $connect->query($querrybooks);
                         while ($row = mysqli_fetch_assoc($result)) {
                             foreach ($book_id as $id) {
                                 if ($row['book_id'] == $id) {
-                                    readlistElement($row['book_image'], $row['book_name'], $row['book_brand'], $row['book_author'], $row['book_id']);
+                                    readlistElement($row['book_image'], $row['book_name'], $row['book_brand'], $row['book_author'],$row['book_type'], $row['book_id']);
                                     $total = $total + (int)$row['book_author'];
                                 }
                             }
