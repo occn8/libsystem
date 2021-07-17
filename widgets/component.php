@@ -41,7 +41,7 @@ function component2($bookname, $booktype, $bookauthor, $bookimg, $bookid)
     <div class=\" py-2\">
                 <form action=\"index.php\" method=\"post\">
                 <div class=\"grid-item $booktype\">
-                <div class=\"item py-2 m-2\" style=\"width: 200px;\">
+                <div class=\"item py-3 m-4\" style=\"width: 200px;\">
                 <div class=\"book \">
                     <a href=\"details.php?book_id=$bookid\"><img src=\"$bookimg\" alt=\"book1\" class=\"img-fluid\"></a>
                     <div class=\"text-center\">
