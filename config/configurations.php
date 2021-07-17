@@ -86,7 +86,8 @@ $books1 = "INSERT INTO `books` (book_id, book_name,book_type, book_brand, book_a
 	(13,'History of something', 'highschool','ukheads','Jannet linda',NOW(),'/libsystem/assets/books/school2.jpg'),
 	(14,'university basics', 'university','ukheads','Jannet linda',NOW(),'/libsystem/assets/books/classics3.jpg'),
 	(15,'most of education', 'stories','ukheads','Jannet linda',NOW(),'/libsystem/assets/books/short2.jpg'),
-	(16,'Duty things', 'classics','ukheads','nikas linda',NOW(),'/libsystem/assets/books/classics1.jpg')";
+	(16,'Duty things', 'classics','ukheads','nikas linda',NOW(),'/libsystem/assets/books/classics1.jpg'),
+	(17,'Act one', 'action','phenix','T Macgragth','2021-02-05 13:23:05','/libsystem/assets/books/school1.jpg')";
 mysqli_query($connect, $books1);
 
 

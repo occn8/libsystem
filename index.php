@@ -9,11 +9,16 @@ include('widgets/header.php');
 ?>
 
 <main>
-    <div class="py-2"></div>
+    <section class="jumbotron text-center" style="background-image: url(assets/images/books-2.jpg);background-repeat: no-repeat;background-size: cover; height: 70vh;">
+        <div class="container" style="background-color: beige;padding: 10px;">
+            <h1>Library Management system</h1>
+        </div>
+    </section>
+    <div class="pt-2"></div>
 
     <section id="primary" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Primary</b></h4>
+            <h4 class="text-center"><b>Primary School Books</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
                 $result = $connect->query($querrybooks);
@@ -27,7 +32,7 @@ include('widgets/header.php');
 
     <section id="highschool" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>High school</b></h4>
+            <h4 class="text-center"><b>High school Books</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
                 $result = $connect->query($querryhighschool);
@@ -46,7 +51,7 @@ include('widgets/header.php');
     </section>
     <section id="university" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>University</b></h4>
+            <h4 class="text-center"><b>University Books</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
                 $result = $connect->query($querrybooks);
@@ -59,7 +64,7 @@ include('widgets/header.php');
     </section>
     <section id="action" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Action & Adventure</b></h4>
+            <h4 class="text-center"><b>Action & Adventure Books</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
                 $result = $connect->query($querryaction);
@@ -72,7 +77,7 @@ include('widgets/header.php');
     </section>
     <section id="classics" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Classics</b></h4>
+            <h4 class="text-center"><b>Classics Books</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
                 $result = $connect->query($querryclassics);
@@ -91,7 +96,7 @@ include('widgets/header.php');
     </section>
     <section id="fantasy" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Fantasy</b></h4>
+            <h4 class="text-center"><b>Fantasy Books</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
                 $result = $connect->query($querrybooks);
@@ -104,7 +109,7 @@ include('widgets/header.php');
     </section>
     <section id="fiction" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Fiction</b></h4>
+            <h4 class="text-center"><b>Fiction Books</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
                 $result = $connect->query($querrybooks);
@@ -117,7 +122,7 @@ include('widgets/header.php');
     </section>
     <section id="stories" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Short Stories</b></h4>
+            <h4 class="text-center"><b>Short Stories Books</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
                 $result = $connect->query($querrystories);
