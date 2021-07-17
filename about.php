@@ -18,20 +18,21 @@ include('widgets/header.php');
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam quas non dolor perspiciatis, vitae quam commodi quos officia sapiente iure similique minus cum molestiae odio earum atque corrupti cupiditate.</p>
                     </div>
                 </div>
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center py-2">
                     <img src="assets/favicon.ico" height="300px" alt="">
                 </div>
             </div>
             <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="assets/favicon.ico" height="300px" alt="">
+                </div>
                 <div class="col-md-6">
                     <div class="container py-5">
                         <h2><i class='bx bx-library color-primary'></i> Our Services</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quae necessitatibus commodi natus fugit. Nisi neque voluptatum aut vero sed, labore impedit repellat consequuntur qui, quibusdam perspiciatis error ipsa nobis!</p>
                     </div>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img src="assets/favicon.ico" height="300px" alt="">
-                </div>
+
             </div>
             <div class="row">
                 <div class="col-md-6">
@@ -40,7 +41,7 @@ include('widgets/header.php');
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quae necessitatibus commodi natus fugit. Nisi neque voluptatum aut vero sed, labore impedit repellat consequuntur qui, quibusdam perspiciatis error ipsa nobis!</p>
                     </div>
                 </div>
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center py-2">
                     <img src="assets/favicon.ico" height="300px" alt="">
                 </div>
             </div>

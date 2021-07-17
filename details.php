@@ -30,15 +30,26 @@ include('widgets/header.php');
                             <div class="form-row pt-4 font-size-16 font-baloo">
 
                                 <div class="col">
-                                    <form action="details.php" method="post">
-                                        <?php if (in_array($_SESSION['item_id'], $cart_item_id ?? [])) : ?>
-                                            <button type="submit" name="add" class="btn btn-warning font-size-16 form-control" disabled>Already In your Reading List</button>
-                                        <?php else : ?>
-                                            <button type="submit" name="add" class="btn btn-warning font-size-16 form-control">Add to Reading List</button>
-                                        <?php endif; ?>
-                                        <input type='hidden' name='book_id' value='<?php echo $_SESSION['item_id'] ?>'>
-                                    </form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <form action="details.php" method="post">
+                                                <?php if (in_array($_SESSION['item_id'], $cart_item_id ?? [])) : ?>
+                                                    <button type="submit" name="add" class="btn btn-secondary font-size-16 form-control" disabled>Already In your Reading List</button>
+                                                <?php else : ?>
+                                                    <button type="submit" name="add" class="btn btn-secondary font-size-16 form-control">Add to Reading List</button>
+                                                <?php endif; ?>
+                                                <input type='hidden' name='book_id' value='<?php echo $_SESSION['item_id'] ?>'>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <form action="details.php" method="post">
+                                                <button type="submit" name="open" class="btn btn-warning font-size-20 form-control"><b><a href="reader.php?book_id=<?php echo $_SESSION['item_id'] ?>" class="color-black">Read Now</a></b></button>
+                                                <input type='hidden' name='book_id' value='<?php echo $_SESSION['item_id'] ?>'>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                         <div class="col-md-6 py-5">
