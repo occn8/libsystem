@@ -141,8 +141,8 @@ if (isset($_POST['register_user'])) {
 		$_SESSION['username'] = $username;
 		$_SESSION['id'] = mysqli_insert_id($connect);
 		setcookie('user', $username, time() + (86400 * 2), "/");
-		if ($_SESSION['pagefrom'] == "cart") {
-			header('location: cart.php');
+		if ($_SESSION['pagefrom'] == "readlist") {
+			header('location: readlist.php');
 		} else {
 			header('location: index.php');
 		}
@@ -226,17 +226,17 @@ if (isset($_GET['logout'])) {
 }
 
 if (isset($_POST['add'])) {
-	if (isset($_SESSION['cart'])) {
+	if (isset($_SESSION['readlist'])) {
 
-		$item_array_id = array_column($_SESSION['cart'], "book_id");
+		$item_array_id = array_column($_SESSION['readlist'], "book_id");
 		$uid = $_SESSION['id'];
 
 		if (in_array($_POST['book_id'], $item_array_id)) {
-			echo "<script>alert('Product is already added in the cart..!')</script>";
+			echo "<script>alert('Book is already added in the cart..!')</script>";
 			echo "<script>window.location = 'index.php'</script>";
 		} else {
 
-			$count = count($_SESSION['cart']);
+			$count = count($_SESSION['readlist']);
 
 			$item_array = array(
 				'userid' => $uid,
@@ -251,8 +251,8 @@ if (isset($_POST['add'])) {
 				$result = $connect->query($insert_cart);
 			}
 
-			$_SESSION['cart'][$count] = $item_array;
-			header('location: cart.php');
+			$_SESSION['readlist'][$count] = $item_array;
+			header('location: readlist.php');
 		}
 	} else {
 
@@ -261,41 +261,10 @@ if (isset($_POST['add'])) {
 			'book_id' => $_POST['book_id'],
 			'book_qty' => 1
 		);
-		$_SESSION['cart'][0] = $item_array;
-		header('location: cart.php');
+		$_SESSION['readlist'][0] = $item_array;
+		header('location: readlist.php');
 	}
 }
-
-if (isset($_POST['add_wishlist'])) {
-	if (isset($_SESSION['wishlist'])) {
-
-		$item_array_id = array_column($_SESSION['wishlist'], "book_id");
-
-		if (in_array($_POST['book_id'], $item_array_id)) {
-			echo "<script>window.location = 'index.php'</script>";
-		} else {
-
-			$count = count($_SESSION['wishlist']);
-
-			$item_array = array(
-				'book_id' => $_POST['book_id'],
-				'book_qty' => 1
-			);
-
-			$_SESSION['wishlist'][$count] = $item_array;
-			header('location: wishlist.php');
-		}
-	} else {
-
-		$item_array = array(
-			'book_id' => $_POST['book_id'],
-			'book_qty' => 1
-		);
-		$_SESSION['wishlist'][0] = $item_array;
-		header('location: wishlist.php');
-	}
-}
-
 
 
 if (isset($_POST['send_msg'])) {

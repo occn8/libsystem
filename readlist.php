@@ -1,12 +1,12 @@
 <?php
 require_once('config/configurations.php');
-require_once('widgets/cartelement.php');
+require_once('widgets/readlistelement.php');
 
 if (isset($_POST['remove'])) {
     if ($_GET['action'] == 'remove') {
-        foreach ($_SESSION['cart'] as $key => $value) {
+        foreach ($_SESSION['readlist'] as $key => $value) {
             if ($value["book_id"] == $_GET['id']) {
-                unset($_SESSION['cart'][$key]);
+                unset($_SESSION['readlist'][$key]);
                 echo "<script>window.location = 'cart.php'</script>";
             }
         }
@@ -15,7 +15,7 @@ if (isset($_POST['remove'])) {
 ?>
 
 <?php
-$currentpage = 'cart';
+$currentpage = 'readlist';
 include('widgets/header.php');
 ?>
 
@@ -29,21 +29,21 @@ include('widgets/header.php');
                     <?php
 
                     $total = 0;
-                    if (isset($_SESSION['cart'])) {
-                        $book_id = array_column($_SESSION['cart'], 'book_id');
-                        $book_qty = array_column($_SESSION['cart'], 'book_qty');
+                    if (isset($_SESSION['readlist'])) {
+                        $book_id = array_column($_SESSION['readlist'], 'book_id');
+                        $book_qty = array_column($_SESSION['readlist'], 'book_qty');
 
                         $result = $connect->query($querrypdts);
                         while ($row = mysqli_fetch_assoc($result)) {
                             foreach ($book_id as $id) {
                                 if ($row['book_id'] == $id) {
-                                    cartElement($row['book_image'], $row['book_name'], $row['book_brand'], $row['book_author'], $row['book_id']);
+                                    readlistElement($row['book_image'], $row['book_name'], $row['book_brand'], $row['book_author'], $row['book_id']);
                                     $total = $total + (int)$row['book_author'];
                                 }
                             }
                         }
                     } else {
-                        echo "<center><h5 class=\"text-warning\">Cart is Empty</h5></center>";
+                        echo "<center><h5 class=\"text-warning\">Your Reading List is Empty</h5></center>";
                     }
 
                     ?>

@@ -115,8 +115,8 @@
                         <li class="nav-item ">
                             <div class="cart">
                                 <div class="cart_container clr-bg d-flex flex-row align-items-center justify-content-end">
-                                    <a href="cart.php" class="btn rounded-pill">
-                                        <div class="cart_icon"> <img src="assets/images/shopping-cart.png" height="30px" width="50px" alt="">
+                                    <a href="readlist.php" class="btn rounded-pill">
+                                    <div class="cart_icon"> <img src="assets/images/favorite-heart.png" height="25px" width="60px" alt="">
                                             <div class="cart_count ">
                                                 <?php
 
@@ -135,29 +135,7 @@
 
                             </div>
                         </li>
-                        <li class="nav-item pl-3">
-                            <div class="cart">
-                                <div class="cart_container clr-bg d-flex flex-row align-items-center justify-content-end">
-                                    <a href="wishlist.php" class="btn rounded-pill">
-                                        <div class="cart_icon"> <img src="assets/images/favorite-heart.png" height="25px" width="60px" alt="">
-                                            <div class="cart_count ">
-                                                <?php
-
-                                                if (isset($_SESSION['wishlist'])) {
-                                                    $count = count($_SESSION['wishlist']);
-                                                    echo "<span id=\"cart_count\" class=\"text-success \">$count</span>";
-                                                } else {
-                                                    echo "<span id=\"cart_count\" class=\"text-success\">0</span>";
-                                                }
-
-                                                ?>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </li>
+                        
                         <?php
                         if (!isset($_SESSION['username'])) {
                             echo "<li class=\"nav-item ml-md-3\">
