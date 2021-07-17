@@ -4,7 +4,7 @@ function readlistElement($bookimg, $bookname, $bookbrand, $bookauthor,$booktype,
 {
     $element = "
     
-    <form action=\"cart.php?action=remove&id=$bookid\" method=\"post\" class=\"cart-items\">
+    <form action=\"readlist.php?action=remove&id=$bookid\" method=\"post\" class=\"cart-items\">
                     <div class=\"border-top rounded py-2 my-4\">
                         <div class=\"row bg-white\">
                             <div class=\"col-md-3 pl-0\">

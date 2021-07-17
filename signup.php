@@ -14,13 +14,14 @@ require_once('config/configurations.php');
     <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <link rel="icon" href="../assets/favicon.ico">
-    <title>Fur-Store SignUp</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <title>Library System SignUp</title>
 </head>
 
 <body>
     <form method="post" action="signup.php" class="needs-validation form-signup" novalidate>
         <center>
+            <img class="mb-4" src="assets/favicon.ico" alt="" height="100">
             <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
         </center>
 

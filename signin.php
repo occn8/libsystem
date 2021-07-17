@@ -13,9 +13,8 @@ require_once('config/configurations.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.2/css/boxicons.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <link rel="icon" href="../assets/favicon.ico">
-    <title>Fur-Store SignIn</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <title>Library System SignIn</title>
 </head>
 
 <body>
@@ -23,7 +22,7 @@ require_once('config/configurations.php');
     <form class="needs-validation form-signin" method="post" action="signin.php" novalidate>
         <?php include('config/errors.php'); ?>
         <center>
-            <img class="mb-4" src="favicon.ico" alt="" height="100">
+            <img class="mb-4" src="assets/favicon.ico" alt="" height="100">
             <h1 class="h3 mb-3 font-weight-normal">Log In</h1>
         </center>
         <div class="form-group">

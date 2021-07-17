@@ -7,7 +7,7 @@ if (isset($_POST['remove'])) {
         foreach ($_SESSION['readlist'] as $key => $value) {
             if ($value["book_id"] == $_GET['id']) {
                 unset($_SESSION['readlist'][$key]);
-                echo "<script>window.location = 'cart.php'</script>";
+                echo "<script>window.location = 'readlist.php'</script>";
             }
         }
     }
@@ -22,6 +22,7 @@ include('widgets/header.php');
 <main>
     <div class="container-fluid">
         <div class="row px-5 py-4">
+            <div class="col-md-3"> </div>
             <div class="col-md-7">
                 <div class="shopping-cart">
                     <h4 class="text-center py-3"><b>My Reading List</b></h4>
@@ -37,7 +38,7 @@ include('widgets/header.php');
                         while ($row = mysqli_fetch_assoc($result)) {
                             foreach ($book_id as $id) {
                                 if ($row['book_id'] == $id) {
-                                    readlistElement($row['book_image'], $row['book_name'], $row['book_brand'], $row['book_author'],$row['book_type'], $row['book_id']);
+                                    readlistElement($row['book_image'], $row['book_name'], $row['book_brand'], $row['book_author'], $row['book_type'], $row['book_id']);
                                     $total = $total + (int)$row['book_author'];
                                 }
                             }
@@ -50,7 +51,7 @@ include('widgets/header.php');
 
                 </div>
             </div>
-            
+
         </div>
     </div>
     <section></section>
