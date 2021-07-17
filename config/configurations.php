@@ -71,17 +71,22 @@ VALUES(1,'martyr','lead', 'admin', 'admin@a.a', NOW(),NOW(), '11th st', 'Uganda'
 mysqli_query($connect, $admincreate);
 
 $books1 = "INSERT INTO `books` (book_id, book_name,book_type, book_brand, book_author, modified, book_image)
-	VALUES (1,'My life again', 'armchairs','ARFLEX','Ben Carson',NOW(),'/libsystem/assets/books/book.png'),
-	(2,'Things mater', 'armchairs','ASTON','berney stinson',NOW(),'/libsystem/assets/books/book.png'),
-	(3,'stranger things', 'armchairs','ARFLEX','mark stinson','2021-02-05 13:23:05','/libsystem/assets/books/book.png'),
-	(4,'second man', 'armchairs','FELTRI','Timmy Grag',NOW(),'/libsystem/assets/books/book.png'),
-	(5,'what they said', 'armchairs','JANET','tom stinson',NOW(),'/libsystem/assets/books/book.png'),
-	(6,'men are men', 'armchairs','LUDWIG','berney Macgragth',NOW(),'/libsystem/assets/books/book.png'),
-	(7,'engineering basics', 'armchairs','PHOENIX','Jimmy stinson',NOW(),'/libsystem/assets/books/book.png'),
-	(8,'making most of education', 'armchairs','ARFLEX','Jannet linda',NOW(),'/libsystem/assets/books/book.png'),
-	(9,'Friends here', 'armchairs','FELTRI','Kenneth stinson',NOW(),'/libsystem/assets/books/book.png'),
-	(10,'them said that', 'armchairs','LOFT','berney Job',NOW(),'/libsystem/assets/books/book.png'),
-	(11,'another book yet', 'armchairs','PHOENIX','Bill stinson',NOW(),'/libsystem/assets/books/book.png')";
+	VALUES (1,'My life again', 'primary','phenix','Ben Carson',NOW(),'/libsystem/assets/books/short2.jpg'),
+	(2,'Things mater', 'highschool','brooks','berney stinson',NOW(),'/libsystem/assets/books/school1.jpg'),
+	(3,'stranger things', 'classics','printx','mark stinson','2021-02-05 13:23:05','/libsystem/assets/books/classics1.jpg'),
+	(4,'second man', 'university','ukheads','Timmy Grag',NOW(),'/libsystem/assets/books/book6.jpg'),
+	(5,'what they said', 'stories','feathink','tom stinson',NOW(),'/libsystem/assets/books/short1.jpg'),
+	(6,'men are men', 'action','phenix','berney Macgragth','2021-02-05 13:23:05','/libsystem/assets/books/short3.jpg'),
+	(7,'engineering basics', 'highschool','feathink','Jimmy stinson','2021-02-05 13:23:05','/libsystem/assets/books/school2.jpg'),
+	(8,'making most of education', 'stories','ukheads','Jannet linda',NOW(),'/libsystem/assets/books/short3.jpg'),
+	(9,'Friends here', 'fantasy','inkfest','Kenneth stinson','2021-02-05 13:23:05','/libsystem/assets/books/classics1.jpg'),
+	(10,'them said that', 'fiction','ukheads','berney Job',NOW(),'/libsystem/assets/books/book6.jpg'),
+	(11,'another book yet', 'fantasy','feathink','Bill stinson','2021-02-05 13:23:05','/libsystem/assets/books/school2.jpg'),
+	(12,'you things', 'classics','infest','mark stinson','2021-02-05 13:23:05','/libsystem/assets/books/classics1.jpg'),
+	(13,'History of something', 'highschool','ukheads','Jannet linda',NOW(),'/libsystem/assets/books/school2.jpg'),
+	(14,'university basics', 'university','ukheads','Jannet linda',NOW(),'/libsystem/assets/books/classics3.jpg'),
+	(15,'most of education', 'stories','ukheads','Jannet linda',NOW(),'/libsystem/assets/books/short2.jpg'),
+	(16,'Duty things', 'classics','ukheads','nikas linda',NOW(),'/libsystem/assets/books/classics1.jpg')";
 mysqli_query($connect, $books1);
 
 
@@ -290,16 +295,10 @@ if (isset($_POST['send_msg'])) {
 }
 
 $querrybooks = "SELECT * FROM books";
-$querryarmchairs = "SELECT * FROM books WHERE book_type='armchairs'";
-$querrychaiselongues = "SELECT * FROM books WHERE book_type='chaiselongues'";
-$querrycushions = "SELECT * FROM books WHERE book_type='cushions'";
-$querrydaybeds = "SELECT * FROM books WHERE book_type='daybeds'";
-$querryEasychairs = "SELECT * FROM books WHERE book_type='Easychairs'";
-$querryFootstools = "SELECT * FROM books WHERE book_type='Footstools'";
-$querryKidssofas = "SELECT * FROM books WHERE book_type='kidssofas'";
-$querryPoufs = "SELECT * FROM books WHERE book_type='Poufs'";
-$querrySmallsofas = "SELECT * FROM books WHERE book_type='Smallsofas'";
-$querrySofa = "SELECT * FROM books WHERE book_type='Sofa'";
+$querryhighschool = "SELECT * FROM books WHERE book_type='highschool'";
+$querryclassics = "SELECT * FROM books WHERE book_type='classics'";
+$querrystories = "SELECT * FROM books WHERE book_type='stories'";
+$querryaction = "SELECT * FROM books WHERE book_type='action'";
 $querrylatest = "SELECT * FROM books WHERE modified='2021-02-05 13:23:05'";
 $querryusers = "SELECT * FROM users";
 $querrymessages = "SELECT * FROM messages";

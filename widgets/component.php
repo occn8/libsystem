@@ -6,7 +6,7 @@ function component($bookname, $bookauthor, $bookimg, $bookid)
     
     <div class=\" py-2\">
                 <form action=\"index.php\" method=\"post\">
-                <div class=\"item py-2\">
+                <div class=\"item py-2 m-2\">
                 <div class=\"book \">
                     <a href=\"details.php?book_id=$bookid\"><img src=\"$bookimg\" alt=\"book1\" class=\"img-fluid\"></a>
                     <br>

@@ -238,39 +238,32 @@
             <h6 class="text-uppercase mb-1"><b>Categories</b></h6>
             <ul class="list-unstyled components mb-3">
                 <li class="lnk">
-                    <a href="index.php#armchairs">Armchairs</a>
+                    <a href="index.php#primary">Primary</a>
                 </li>
                 <li>
-                    <a href="index.php#chaiselongues">Chaise longues</a>
+                    <a href="index.php#highschool">High school</a>
                 </li>
                 <li>
-                    <a href="index.php#cushions">Cushions</a>
+                    <a href="index.php#university">University</a>
                 </li>
                 <li>
-                    <a href="index.php#daybeds">Daybeds</a>
+                    <a href="index.php#action">Action & Adventure</a>
                 </li>
                 <li>
-                    <a href="index.php#easychairs">Easychairs</a>
+                    <a href="index.php#classics">Classics</a>
                 </li>
                 <li>
-                    <a href="index.php#footstools">Footstools</a>
+                    <a href="index.php#fantasy">Fantasy</a>
                 </li>
                 <li>
-                    <a href="index.php#kidssofas">Kidssofas</a>
+                    <a href="index.php#fiction">Fiction </a>
                 </li>
                 <li>
-                    <a href="index.php#poufs">Poufs</a>
-                </li>
-                <li>
-                    <a href="index.php#smallsofas">Smallsofas</a>
-                </li>
-                <li>
-                    <a href="index.php#sofa">Sofa</a>
+                    <a href="index.php#stories">Short Stories</a>
                 </li>
             </ul>
 
             <ul class="social-icons">
-                <li><a href="#" target="_blank" title=""><i class="bx bxl-github"></i></a></li>
                 <li><a href="#" target="_blank" title=""><i class="bx bxl-twitter"></i></a></li>
                 <li><a href="#" target="_blank" title=""><i class="bx bxl-facebook"></i></a></li>
                 <li><a href="#" target="_blank" title=""><i class="bx bxl-instagram"></i></a></li>

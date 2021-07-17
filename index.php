@@ -11,12 +11,12 @@ include('widgets/header.php');
 <main>
     <div class="py-2"></div>
 
-    <section id="armchairs" class="custom-sale">
+    <section id="primary" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Armchairs</b></h4>
+            <h4 class="text-center"><b>Primary</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
-                $result = $connect->query($querryarmchairs);
+                $result = $connect->query($querrybooks);
                 while ($row = mysqli_fetch_assoc($result)) {
                     component($row['book_name'], $row['book_author'], $row['book_image'], $row['book_id']);
                 }
@@ -25,12 +25,12 @@ include('widgets/header.php');
         </div>
     </section>
 
-    <section id="chaiselongues" class="custom-sale">
+    <section id="highschool" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Chaise longues</b></h4>
+            <h4 class="text-center"><b>High school</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
-                $result = $connect->query($querrychaiselongues);
+                $result = $connect->query($querryhighschool);
                 while ($row = mysqli_fetch_assoc($result)) {
                     component($row['book_name'], $row['book_author'], $row['book_image'], $row['book_id']);
                 }
@@ -44,12 +44,12 @@ include('widgets/header.php');
             <img src="assets/images/5.jpg" alt="banner1" class="img-fluid">
         </div>
     </section>
-    <section id="cushions" class="custom-sale">
+    <section id="university" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Cushions</b></h4>
+            <h4 class="text-center"><b>University</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
-                $result = $connect->query($querrycushions);
+                $result = $connect->query($querrybooks);
                 while ($row = mysqli_fetch_assoc($result)) {
                     component($row['book_name'], $row['book_author'], $row['book_image'], $row['book_id']);
                 }
@@ -57,12 +57,12 @@ include('widgets/header.php');
             </div>
         </div>
     </section>
-    <section id="daybeds" class="custom-sale">
+    <section id="action" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Daybeds</b></h4>
+            <h4 class="text-center"><b>Action & Adventure</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
-                $result = $connect->query($querrydaybeds);
+                $result = $connect->query($querryaction);
                 while ($row = mysqli_fetch_assoc($result)) {
                     component($row['book_name'], $row['book_author'], $row['book_image'], $row['book_id']);
                 }
@@ -70,12 +70,12 @@ include('widgets/header.php');
             </div>
         </div>
     </section>
-    <section id="easychairs" class="custom-sale">
+    <section id="classics" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Easy chairs</b></h4>
+            <h4 class="text-center"><b>Classics</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
-                $result = $connect->query($querryEasychairs);
+                $result = $connect->query($querryclassics);
                 while ($row = mysqli_fetch_assoc($result)) {
                     component($row['book_name'], $row['book_author'], $row['book_image'], $row['book_id']);
                 }
@@ -89,12 +89,12 @@ include('widgets/header.php');
             <img src="assets/images/3.jpg" alt="banner1" class="img-fluid">
         </div>
     </section>
-    <section id="footstools" class="custom-sale">
+    <section id="fantasy" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Footstools</b></h4>
+            <h4 class="text-center"><b>Fantasy</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
-                $result = $connect->query($querryFootstools);
+                $result = $connect->query($querrybooks);
                 while ($row = mysqli_fetch_assoc($result)) {
                     component($row['book_name'], $row['book_author'], $row['book_image'], $row['book_id']);
                 }
@@ -102,12 +102,12 @@ include('widgets/header.php');
             </div>
         </div>
     </section>
-    <section id="kidssofas" class="custom-sale">
+    <section id="fiction" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Kidssofas</b></h4>
+            <h4 class="text-center"><b>Fiction</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
-                $result = $connect->query($querryKidssofas);
+                $result = $connect->query($querrybooks);
                 while ($row = mysqli_fetch_assoc($result)) {
                     component($row['book_name'], $row['book_author'], $row['book_image'], $row['book_id']);
                 }
@@ -115,12 +115,12 @@ include('widgets/header.php');
             </div>
         </div>
     </section>
-    <section id="poufs" class="custom-sale">
+    <section id="stories" class="custom-sale">
         <div class="container py-3">
-            <h4 class="text-center"><b>Poufs</b></h4>
+            <h4 class="text-center"><b>Short Stories</b></h4>
             <div class="owl-carousel owl-theme">
                 <?php
-                $result = $connect->query($querryPoufs);
+                $result = $connect->query($querrystories);
                 while ($row = mysqli_fetch_assoc($result)) {
                     component($row['book_name'], $row['book_author'], $row['book_image'], $row['book_id']);
                 }
@@ -128,38 +128,7 @@ include('widgets/header.php');
             </div>
         </div>
     </section>
-    <section id="smallsofas" class="custom-sale">
-        <div class="container py-3">
-            <h4 class="text-center"><b>Small sofas</b></h4>
-            <div class="owl-carousel owl-theme">
-                <?php
-                $result = $connect->query($querrySmallsofas);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    component($row['book_name'], $row['book_author'], $row['book_image'], $row['book_id']);
-                }
-                ?>
-            </div>
-        </div>
-    </section>
-    <section id="banner_adds">
-        <div class="container py-5 text-center">
-            <img src="assets/images/banner1.jpg" alt="banner1" class="img-fluid">
-            <img src="assets/images/banner2.jpg" alt="banner1" class="img-fluid">
-        </div>
-    </section>
-    <section id="sofa" class="custom-sale">
-        <div class="container py-3">
-            <h4 class="text-center"><b>Sofa</b></h4>
-            <div class="owl-carousel owl-theme">
-                <?php
-                $result = $connect->query($querrySofa);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    component($row['book_name'], $row['book_author'], $row['book_image'], $row['book_id']);
-                }
-                ?>
-            </div>
-        </div>
-    </section>
+
 
 </main>
 

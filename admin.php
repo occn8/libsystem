@@ -53,7 +53,7 @@ include('widgets/header.php');
       </li>
       <li>
         <a href="#carts">
-          <span>Carts</span>
+          <span>ReadLists</span>
         </a>
       </li>
   </nav>
@@ -87,15 +87,15 @@ include('widgets/header.php');
             <h5>Books Image</h5>
           </th>
         </tr>
-        <?php foreach ($result as $pdt) : ?>
+        <?php foreach ($result as $book) : ?>
           <tr>
-            <td class="had"><?php echo $pdt['book_id']; ?></td>
-            <td class="had"><?php echo $pdt['book_name']; ?></td>
-            <td class="had"><?php echo $pdt['book_type']; ?></td>
-            <td class="had"><?php echo $pdt['book_brand']; ?></td>
-            <td class="had"><?php echo $pdt['book_author']; ?></td>
-            <td class="had"><?php echo $pdt['modified']; ?></td>
-            <td class="had"><?php echo $pdt['book_image']; ?></td>
+            <td class="had"><?php echo $book['book_id']; ?></td>
+            <td class="had"><?php echo $book['book_name']; ?></td>
+            <td class="had"><?php echo $book['book_type']; ?></td>
+            <td class="had"><?php echo $book['book_brand']; ?></td>
+            <td class="had"><?php echo $book['book_author']; ?></td>
+            <td class="had"><?php echo $book['modified']; ?></td>
+            <td class="had"><?php echo $book['book_image']; ?></td>
           </tr>
         <?php endforeach; ?>
       </table>
@@ -267,29 +267,29 @@ include('widgets/header.php');
   </section>
   <section id="carts">
     <div class="container py-4 border-top">
-      <h3><b>Carts</b></h3>
+      <h3><b>ReadLists</b></h3>
       <div class="container py-4" id="cart">
         <table id="t98">
           <tr>
             <th class="had">
-              <h5>Cart ID</h5>
+              <h5>ReadList ID</h5>
             </th>
             <th class="had">
               <h5>User ID</h5>
             </th>
             <th class="had">
-              <h5>Product ID</h5>
+              <h5>Book ID</h5>
             </th>
             <th class="had">
-              <h5>Product QTY</h5>
+              <h5>Book QTY</h5>
             </th>
           </tr>
-          <?php foreach ($cartresult as $cart) : ?>
+          <?php foreach ($readlistresult as $readlist) : ?>
             <tr>
-              <td class="had"><?php echo $cart['cart_id']; ?></td>
-              <td class="had"><?php echo $cart['userid']; ?></td>
-              <td class="had"><?php echo $cart['product_id']; ?></td>
-              <td class="had"><?php echo $cart['product_qty']; ?></td>
+              <td class="had"><?php echo $readlist['read$readlist_id']; ?></td>
+              <td class="had"><?php echo $readlist['userid']; ?></td>
+              <td class="had"><?php echo $readlist['book_id']; ?></td>
+              <td class="had"><?php echo $readlist['book_qty']; ?></td>
             </tr>
           <?php endforeach; ?>
         </table>
