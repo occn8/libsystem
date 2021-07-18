@@ -1,6 +1,5 @@
 <?php
 require_once('config/configurations.php');
-// require_once('widgets/detail.php');
 ?>
 
 <?php

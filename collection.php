@@ -13,7 +13,7 @@ include('widgets/header.php');
         <div class="container py-5 ctn">
             <h4 class="text-center py-1"><b>Our Book Collection</b></h4>
             <div id="filters" class="button-group border-bottom text-center font-baloo font-size-16">
-                <button class="btn color-primary coll-btn is-checked" data-filter="*"><b>All Furniture</b></button>
+                <button class="btn color-primary coll-btn is-checked" data-filter="*"><b>All Books</b></button>
                 <button class="btn coll-btn" data-filter=".primary">Primary</button>
                 <button class="btn coll-btn" data-filter=".highschool">High-school</button>
                 <button class="btn coll-btn" data-filter=".university">University</button>

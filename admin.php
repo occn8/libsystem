@@ -1,12 +1,10 @@
 <?php
 require_once('config/configurations.php');
-// require_once('widgets/detail.php');
 ?>
 
 <?php
 $currentpage = 'admin';
 include('widgets/header.php');
-// require_once('config/user_detail.php');
 
 ?>
 <header class="page-header shadow">
@@ -25,11 +23,6 @@ include('widgets/header.php');
           <span>Insert Book</span>
         </a>
       </li>
-      <!-- <li>
-        <a href="#update_product">
-          <span>Update Product</span>
-        </a>
-      </li> -->
       <li>
         <a href="#delete_product">
           <span>Delete Books</span>
@@ -129,6 +122,10 @@ include('widgets/header.php');
           <div class="form-group ">
             <label for="" class="text-black"><b>Book Author</b> </label>
             <input type="textfield" class="form-control" id="" name="pdtprice" placeholder="author" value="" required>
+          </div>
+          <div class="form-group ">
+            <label for="" class="text-black"><b>Image Link</b> </label>
+            <input type="textfield" class="form-control" id="" name="pdtimg" placeholder="/libsystem/assets/books/short3.jpg" value="" required>
           </div>
 
           <br>

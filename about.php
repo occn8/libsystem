@@ -49,17 +49,6 @@ include('widgets/header.php');
     </section>
 
 
-
-    <!-- <section id="features">
-        <div class="container py-5">
-            <h2><i class='bx bxs-setting color-primary'></i> Features & Services</h2>
-            <div class="row">
-                <div class="col-md-6"></div>
-                <div class="col-md-6"></div>
-            </div>
-        </div>
-    </section> -->
-
 </main>
 
 <?php

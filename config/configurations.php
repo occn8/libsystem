@@ -351,6 +351,8 @@ if (isset($_POST['add_product'])) {
 	$pdttype = mysqli_real_escape_string($connect, $_POST['pdttype']);
 	$pdtbrand = mysqli_real_escape_string($connect, $_POST['pdtbrand']);
 	$pdtprice = mysqli_real_escape_string($connect, $_POST['pdtprice']);
+	$pdtimg = mysqli_real_escape_string($connect, $_POST['pdtimg']);
+
 	if (empty($pdtname)) {
 		array_push($errors, "Name required");
 	}
@@ -365,7 +367,7 @@ if (isset($_POST['add_product'])) {
 	}
 	if (count($errors) == 0) {
 		$query = "INSERT INTO books (book_name,book_type, book_brand, book_author, modified, book_image) 
-					  VALUES('$pdtname', '$pdttype','$pdtbrand','$pdtprice',NOW(),'/libsystem/assets/books/book.png')";
+					  VALUES('$pdtname', '$pdttype','$pdtbrand','$pdtprice',NOW(),'$pdtimg')";
 		mysqli_query($connect, $query);
 		header('location: admin.php');
 	}
