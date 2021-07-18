@@ -23,7 +23,7 @@ function component($bookname, $bookauthor, $bookimg, $bookid)
                             <span>
                             Author: <b>$bookauthor</b></span>
                         </div>
-                        <button type=\"submit\" class=\"btn btn-warning\" name=\"detail-link\"><a href=\"details.php?book_id=$bookid\" class=\"color-black\">View Book</a></button>
+                        <a href=\"details.php?book_id=$bookid\" class=\"color-black font-size-20\"><div type=\"submit\" class=\"btn btn-warning\" name=\"detail-link\">View Book</div></a>
                         <input type='hidden' name='book_id' value='$bookid'>
                     </div> 
                 </div>
@@ -56,7 +56,7 @@ function component2($bookname, $booktype, $bookauthor, $bookimg, $bookid)
                         <div class=\"author py-2\">
                             <span>Author: <b>$bookauthor</b></span>
                         </div>
-                        <button type=\"submit\" class=\"btn btn-warning\" name=\"detail-link\"><a href=\"details.php?book_id=$bookid\" class=\"color-black\">View Book</a></button>
+                        <a href=\"details.php?book_id=$bookid\" class=\"color-black font-size-20\"><div type=\"submit\" class=\"btn btn-warning\" name=\"detail-link\">View Book</div></a>
                         <input type='hidden' name='book_id' value='$bookid'>
                     </div> 
                 </div>

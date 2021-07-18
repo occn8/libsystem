@@ -42,7 +42,9 @@ include('widgets/header.php');
                                         </div>
                                         <div class="col-md-6">
                                             <form action="details.php" method="post">
-                                                <button type="submit" name="open" class="btn btn-warning font-size-20 form-control"><b><a href="reader.php?book_id=<?php echo $_SESSION['item_id'] ?>" class="color-black">Read Now</a></b></button>
+                                                <a href="reader.php?book_id=<?php echo $_SESSION['item_id'] ?>" class="color-black">
+                                                    <div type="submit" name="open" class="btn btn-warning font-size-20 form-control"><b>Read Now</b></div>
+                                                </a>
                                                 <input type='hidden' name='book_id' value='<?php echo $_SESSION['item_id'] ?>'>
                                             </form>
                                         </div>
